@@ -1,4 +1,4 @@
-name: Clojure CI
+name: Weather App build CI
 
 on:
   push:

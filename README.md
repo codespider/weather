@@ -1,4 +1,4 @@
-# weather
+# weather ![Clojure CI](https://github.com/codespider/weather/workflows/Clojure%20CI/badge.svg)
 
 FIXME: description
 
