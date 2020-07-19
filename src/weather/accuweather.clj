@@ -23,7 +23,10 @@
 
 (defn get-current-conditions
   [location-key]
-  (client/get (str (:current-weather-url config) location-key)
-              {:query-params {"apikey"  (:api-key config)
-                              "details" "true"}}))
+  (let [url      (str (:current-weather-url config) location-key)
+        api-key  (:api-key config)
+        response (client/get url {:query-params {"apikey"  api-key
+                                                 "details" "true"}})
+        body     (-> response :body json/read-str first)]
+    body))
 
