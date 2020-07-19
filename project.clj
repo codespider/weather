@@ -11,11 +11,12 @@
                  [camel-snake-kebab "0.4.1"]
                  [org.clojure/tools.cli "1.0.194"]
                  [ragtime "0.8.0"]
+                 [org.clojure/java.jdbc "0.7.10"]
                  [com.h2database/h2 "1.4.200"]]
   :plugins [[jonase/eastwood "0.3.10"]
             [lein-cljfmt "0.6.8"]]
-  :aliases {"migrate"  ["run" "-m" "user/migrate"]
-            "rollback" ["run" "-m" "user/rollback"]}
+  :aliases {"migrate"  ["run" "-m" "weather.migrate/migrate"]
+            "rollback" ["run" "-m" "weather.migrate/rollback"]}
   :main ^:skip-aot weather.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})

@@ -1,2 +1,9 @@
-{:up   ["create table foo (id int);"]
- :down ["drop table foo;"]}
+{:up   ["create table WEATHER(
+                ID INT auto_increment,
+                DAY DATE,
+                HOUR INT,
+                ACCU_RAIN_PROBABALITY INT,
+                ACCU_ACTUAL_RAIN INT,
+                ACCU_RAW_FORECAST LONGTEXT,
+                ACCU_RAW_ACTUAL LONGTEXT);"]
+ :down ["drop table WEATHER;"]}
